@@ -1,0 +1,153 @@
+aside {
+    max-width: 100%; /* Full width for smaller screens */
+    width: 100%; /* Ensure it takes full width */
+    height: auto; /* Adjust height for smaller screens */
+    position: fixed; /* Keep it in place */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Enables vertical scrolling */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: gray transparent; /* Firefox */
+    background-color: #02021b;
+    color: white;
+     z-index: 1000;/* Ensure it stays above other content */
+    padding: 10px; /* Add padding for better spacing */
+    box-sizing: border-box;
+}
+
+
+
+aside .aside-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Reduce gap for smaller screens */
+    padding: 10px; /* Add padding for better spacing */
+}
+
+aside .aside-header .aside-header-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+aside .aside-header .aside-header-icon div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Adjust width for smaller screens */
+    height: 50px; /* Adjust height for smaller screens */
+}
+
+aside .aside-header .aside-user-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Reduce gap for smaller screens */
+    padding: 10px; /* Add padding for better spacing */
+    width: 100%; /* Full width for smaller screens */
+}
+
+aside .aside-header .aside-user-profile .avatar {
+    width: 100px; /* Adjust avatar size for smaller screens */
+    height: 100px; /* Adjust avatar size for smaller screens */
+    border-radius: 50%;
+}
+
+aside .aside-header .aside-user-profile div h2 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    text-align: center; /* Center text */
+}
+
+aside .aside-header .aside-menu {
+    height: auto; /* Adjust height for smaller screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Add padding for better spacing */
+}
+
+aside .aside-header .aside-menu .aside-menu-top ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduce gap for smaller screens */
+    padding: 0; /* Remove default padding */
+    list-style: none; /* Remove default list styling */
+}
+
+aside .aside-header .aside-menu .aside-menu-top ul li {
+    cursor: pointer;
+    padding: 10px; /* Add padding for better spacing */
+    text-align: center; /* Center text */
+}
+
+aside .aside-header .aside-menu .aside-menu-bottom{
+    margin-top: 10px;
+}
+aside .aside-header .aside-menu .aside-menu-bottom ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Reduce gap for smaller screens */
+    padding: 0; /* Remove default padding */
+    list-style: none; /* Remove default list styling */
+}
+
+/* Media Queries for Responsive Design */
+
+@media only screen and (min-width: 768px) {
+    aside {
+        max-width: 25%; /* Adjust width for medium screens */
+        width: 25%; /* Set fixed width */
+        height: 100vh; /* Full height */
+    }
+
+    aside .aside-header .aside-user-profile .avatar {
+        width: 120px; /* Adjust avatar size for medium screens */
+        height: 120px; /* Adjust avatar size for medium screens */
+    }
+
+    aside .aside-header .aside-user-profile div h2 {
+        font-size: 1.5rem; /* Adjust font size for medium screens */
+    }
+    aside .aside-header .aside-header-icon .x{
+        display: block;
+        
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    aside {
+        max-width: 20%; /* Adjust width for larger screens */
+        width: 20%; /* Set fixed width */
+    }
+
+    aside .aside-header .aside-user-profile .avatar {
+        width: 140px; /* Adjust avatar size for larger screens */
+        height: 140px; /* Adjust avatar size for larger screens */
+    }
+
+    aside .aside-header .aside-user-profile div h2 {
+        font-size: 1.7rem; /* Adjust font size for larger screens */
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    aside {
+        max-width: 17%; /* Adjust width for extra-large screens */
+        width: 59%; /* Set fixed width */
+        
+       
+       
+    }
+
+    aside .aside-header .aside-user-profile .avatar {
+        width: 160px; /* Adjust avatar size for extra-large screens */
+        height: 170px; /* Adjust avatar size for extra-large screens */
+    }
+
+    aside .aside-header .aside-user-profile div h2 {
+        font-size: 2rem; /* Adjust font size for extra-large screens */
+    }
+}

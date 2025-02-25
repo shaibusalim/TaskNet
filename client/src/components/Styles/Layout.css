@@ -1,0 +1,60 @@
+/* Base Styles */
+.layout-main {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .layout-side {
+    width: 245px; /* Fixed width for sidebar */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for sidebar */
+   
+  }
+  
+  .layout-content {
+    margin-left: 230px; /* Default margin for desktop */
+    width: calc(100% - 245px); /* Adjust width to account for sidebar */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: margin-left 0.3s ease-in-out; /* Smooth transition for content */
+  }
+  
+  .layout-content.shifted {
+    margin-left: 100; /* Remove margin when sidebar is hidden */
+  }
+  
+  .main-content {
+    margin-top: 80px; /* Space for the header */
+    padding: 20px; /* Add padding for better spacing */
+  }
+  
+  /* Responsive Styles */
+  @media only screen and (max-width: 768px) {
+    .layout-side {
+      transform: translateX(-100%); /* Hide sidebar by default on mobile */
+      width: 545px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow-y: auto; /* Enables vertical scrolling */
+      scrollbar-width: thin;
+    }
+  
+    .layout-side.open {
+      transform: translateX(0); /* Show sidebar when open */
+    }
+  
+    .layout-content {
+      margin-left: 0; /* Remove margin for mobile */
+      width: 100%; /* Full width for mobile */
+    }
+  
+   
+  }
+

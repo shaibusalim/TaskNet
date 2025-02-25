@@ -1,0 +1,17 @@
+.notification-container{
+    border: 2px solid white;
+    width: 350px;
+    height: 350px;
+    position: fixed;
+    top: -400px;
+    right: 80px;
+    z-index: 9999;
+    opacity: 0;
+    transition:  top 0.5s ease, opacity 0.5s ease; 
+    pointer-events: none;
+}
+.opeen{
+    opacity: 1;  /* Fade in */
+    pointer-events: auto;
+    top: 60px;
+}

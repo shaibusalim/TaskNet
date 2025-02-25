@@ -1,0 +1,214 @@
+.poster-task-container {
+    padding: 20px 15px 0px 30px;
+    color: white;
+    background-color: #080815;
+    display: flex;
+    flex-direction: column;
+}
+.poster-task-container .div1{
+    margin-left: 10px;
+}
+.poster-task-container .div1 h2 {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: rgba(157, 148, 169, 0.4);
+}
+
+.poster-task-container .div2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-direction: column;
+}
+
+.poster-task-container .div2 .poster-task-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.poster-task-container .div2 .poster-task-content .poster-task-header {
+    border: 2px solid rgba(196, 170, 170, 0.4);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(128, 46, 226, 1);
+    border-radius: 10px;
+}
+
+.poster-task-container .div2 .poster-task-content .poster-task-header select {
+    height: 40px;
+    padding: 5px;
+    width: 105px;
+    border-radius: 5px;
+    color: #7c7878;
+}
+
+.poster-task-container .div2 .poster-task-content .poster-task-cards {
+    margin-top: 40px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.poster-task-container .div2 .poster-task-content .poster-task-cards .poster-task-card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(128, 46, 226, 1);
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid white;
+}
+
+.poster-task-container .div2 .poster-task-content .poster-task-cards .poster-task-card .card-task-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.poster-task-container .div2 .poster-task-content .poster-task-cards .poster-task-card .card-task-name h3 {
+    font-size: 1rem;
+}
+
+.poster-task-container .div2 .poster-task-content .poster-task-cards .poster-task-card .card-task-name p {
+    background-color: #383839;
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.poster-task-container .div2 .poster-task-content .poster-task-cards .poster-task-card .poster-task-details {
+    margin-top: 20px;
+}
+
+.poster-task-container .div2 .poster-task-content .poster-task-cards .poster-task-card .p {
+    font-size: 1.1rem;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.poster-task-container .div2 .poster-task-content .poster-task-cards .poster-task-card .poster-task-time span {
+    background: linear-gradient(316deg, #f94327 0%, #ff7d14 74%);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.poster-task-container .div2 .poster-task-content .poster-task-cards .poster-task-card .poster-card-bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.poster-task-container .div2 .poster-task-side-content {
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgb(93, 34, 165);
+    border-radius: 10px;
+  
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border: 2px solid white;
+}
+
+.poster-task-container .div2 .poster-task-side-content .poster-task-side-search h3 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #575757;
+}
+
+.poster-task-container .div2 .poster-task-side-content .poster-task-side-search div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #575757;
+    margin-top: 30px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.poster-task-container .div2 .poster-task-side-content .poster-task-side-status {
+    margin-top: 20px;
+}
+
+/* Add these classes for priority colors */
+.priority-highest {
+    color: #f44336; /* Red */
+  }
+  
+  .priority-high {
+    color: #ff9800; /* Orange */
+  }
+  
+  .priority-normal {
+    color: #4caf50; /* Green */
+  }
+  
+  .priority-low {
+    color: #009688; /* Teal */
+  }
+
+/* Media Queries for Responsive Design */
+
+@media only screen and (min-width: 768px) {
+    .poster-task-container .div2 {
+        flex-direction: row;
+    }
+
+    .poster-task-container .div2 .poster-task-content {
+        width: 70%;
+    }
+
+    .poster-task-container .div2 .poster-task-side-content {
+        width: 28%;
+        margin-top: 0;
+    }
+
+    .poster-task-container .div2 .poster-task-content .poster-task-cards .poster-task-card {
+        width: calc(50% - 10px);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .poster-task-container .div2 .poster-task-content .poster-task-cards .poster-task-card {
+        width: calc(50.33% - 14px);
+    }
+    
+}
+
+@media only screen and (min-width: 1400px) {
+    .poster-task-container .div2 .poster-task-content .poster-task-cards {
+        padding: 25px;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .poster-task-container .div2 .poster-task-content .poster-task-cards .poster-task-card {
+        width: calc(50.33% - 20px);
+    }
+
+
+    .poster-task-container .div2 .poster-task-content .poster-task-header {
+        width: 93%;
+        margin-left: 20px;
+    }
+    .poster-task-container .div1{
+        margin-left: 25px;
+    }
+
+   
+    .poster-task-container .div2 .poster-task-side-content .poster-task-side-search div {
+        justify-content: space-between;
+    }
+}

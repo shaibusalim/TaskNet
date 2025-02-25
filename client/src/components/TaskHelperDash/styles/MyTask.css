@@ -1,0 +1,172 @@
+.helpe-task-container{
+    padding: 20px 15px 0px 30px;
+    color:  white;
+    background-color: #080815;
+    display: flex;
+    flex-direction: column;
+}
+.helper-task-container .div1{
+    margin-left: 50px;
+    color: white;
+}
+.helper-task-container .div1 h2{
+    font-size: 3rem;
+    font-weight: bolder;
+    color: rgba(157, 148, 169, 0.4);
+
+}
+.helper-task-container .div2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    color: white;
+}
+.helper-task-container .div2 .helper-task-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.helper-task-container .div2 .helper-task-content .helper-task-header{
+    border: 2px solid rgba(196, 170, 170, 0.4);
+    width: 80%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 0  10px rgba(128, 46, 226, 1);
+    border-radius: 10px;
+}
+.helper-task-container .div2 .helper-task-content .helper-task-header select{
+    
+    height: 40px;
+    padding: 5px;
+    width: 105px;
+    border-radius: 5px;
+    color: #7c7878;
+}
+.helper-task-container .div2 .helper-task-content .helper-task-cards{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+   
+}
+.helper-task-container .div2 .helper-task-content .helper-task-cards .helper-task-card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    box-shadow: 0 0  10px rgba(128, 46, 226, 1);
+    border-radius: 10px;
+    width: 45%;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+.helper-task-container .div2 .helper-task-content .helper-task-cards .helper-task-card .card-task-name{
+    display: flex;
+    justify-content: space-between
+    
+}
+.helper-task-container .div2 .helper-task-content .helper-task-cards .helper-task-card .card-task-name h3{
+    font-size: 1rem;
+}
+.helper-task-container .div2 .helper-task-content .helper-task-cards .helper-task-card .card-task-name p{
+    background-color: #383839;
+    color: rgba(255,255,255,0.5);
+    border-radius: 5px;
+    padding: 2px;
+    
+}
+.helper-task-container .div2 .helper-task-content .helper-task-cards .helper-task-card .helper-task-details{
+    margin-top: 20px;
+}
+.helper-task-container .div2 .helper-task-content .helper-task-cards .helper-task-card .p{
+    font-size: 1.1rem;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.helper-task-container .div2 .helper-task-content .helper-task-cards .helper-task-card .helper-task-time span{
+    background: linear-gradient(316deg, #f94327 0%, #ff7d14 74%);
+border-radius: 8px;
+font-size: 1rem;
+font-weight: 500;
+padding: 5px;
+}
+.helper-task-container .div2 .helper-task-content .helper-task-cards .helper-task-card .helper-card-bottom{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+  @media only screen and (min-width: 1400px) {
+    
+    .helper-task-container .div2 .helper-task-content .helper-task-cards{
+        margin-top: 40px;
+        display: flex;
+        padding: 25px;
+        gap: 30px;
+        flex-wrap: wrap;
+        width: 100%;
+        
+        
+       
+    }
+    .helper-task-container .div2 .helper-task-content .helper-task-cards .helper-task-card{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        box-shadow: 0 0  10px rgba(128, 46, 226, 1);
+        border-radius: 10px;
+        width: 30%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+   
+    .helper-task-container .div2 .helper-task-content .helper-task-header{
+        width: 70%;
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 20px;
+        box-sizing: border-box;
+        box-shadow: 0 0  10px rgba(128, 46, 226, 1);
+        border-radius: 10px;
+    }
+    .helper-task-container .div2 .helper-task-side-content .helper-task-side-search div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #575757 ;
+        margin-top: 30px;
+        height: 45px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    
+  }
+
+
+
+
+
+
+
+   
+  

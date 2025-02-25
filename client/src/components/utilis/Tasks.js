@@ -1,0 +1,81 @@
+export const tasks = [
+  {
+    id: 1,
+    taskNumber: "#24. Create UI design Model",
+    date: "28 February 2025",
+    details:
+      "A collection of textile samples lay spread out on the table..",
+    due: "23 Hours",
+    payment: "$500",
+    location: "Tamale, Ghana.",
+    image: "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg",
+    priority: "Highest Priority",
+    progress: "Pending",
+  },
+  {
+    id: 2,
+    taskNumber: "#25. Develop Landing Page",
+    date: "01 March 2025",
+    details:
+      "Develop a responsive landing page. Ensure the design is modern and mobile friendly.",
+    due: "48 Hours",
+    payment: "$750",
+    location: "Accra, Ghana.",
+    image: "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg",
+    priority: "Normal Priority",
+    progress: "In Progress",
+  },
+  {
+      id: 3,
+      taskNumber: "#26. Fix Backend API Issues",
+      date: "03 March 2025",
+      details:
+        "Debug and optimize API performance for better response times.",
+      due: "36 Hours",
+      payment: "$600",
+      location: "Kumasi, Ghana.",
+      image: "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg",
+      priority: "Highest Priority",
+      progress: "In Progress",
+    },
+    {
+      id: 4,
+      taskNumber: "#27. Write Documentation",
+      date: "05 March 2025",
+      details:
+        "Prepare detailed documentation for the project, including API references.",
+      due: "72 Hours",
+      payment: "$400",
+      location: "Cape Coast, Ghana.",
+      image: "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg",
+      priority: "Low Priority",
+      progress: "In Progress",
+    },
+
+    {
+      id: 5,
+      taskNumber: "#28. Create Marketing Strategy",
+      date: "06 March 2025",
+      details:
+        "Develop a marketing strategy to promote the new product launch.",
+      due: "96 Hours",
+      payment: "$850",
+      location: "Sunyani, Ghana.",
+      image: "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg",
+      priority: "High Priority",
+      progress: "In Progress",
+    },
+    {
+      id: 6,
+      taskNumber: "#29. Test UI Components",
+      date: "07 March 2025",
+      details:
+        "Perform usability testing on UI components and fix bugs.",
+      due: "48 Hours",
+      payment: "$500",
+      location: "Takoradi, Ghana.",
+      image: "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg",
+      priority: "Normal Priority",
+      progress: "In Progress",
+    },
+];
