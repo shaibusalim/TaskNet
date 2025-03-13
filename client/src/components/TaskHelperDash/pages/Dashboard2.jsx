@@ -33,14 +33,14 @@ function Dashboard2 () {
   ];
 
   return (
-    <div className='poster-dashboard-main'>
-      <div className='poster-dashboard-header'>
+    <div className='helper-dashboard-main'>
+      <div className='helper-dashboard-header'>
         <h1>DASHBOARD</h1>
         <h2>Welcome to your dashboard</h2>
       </div>
-      <div className='poster-dashboard-content'>
+      <div className='helper-dashboard-content'>
         {/* Cards Section */}
-        <div className='poster-dashboard-card'>
+        <div className='helper-dashboard-card'>
           {cardData.map((card, index) => (
             <div
               key={index}
@@ -56,8 +56,8 @@ function Dashboard2 () {
         </div>
 
         {/* Pie Chart Section */}
-        <div className='poster-dashboard-piechat'>
-          <div className='poster-section1 p-6 bg-gray-800 rounded-lg shadow-lg'>
+        <div className='helper-dashboard-piechat'>
+          <div className='helper-section1 p-6 bg-gray-800 rounded-lg shadow-lg'>
             <h3 className='text-xl font-semibold text-white mb-4'>Recent Activities</h3>
             <ul className='text-gray-300'>
             <li className='mb-2'>✅ New poster published: "Summer Sale Announced"</li>
@@ -66,7 +66,7 @@ function Dashboard2 () {
               <li className='mb-2'>✅ New poster published: "Community Event Reminder"</li>
             </ul>
           </div>
-          <div className='poster-pie p-6 bg-gray-800 rounded-lg shadow-lg'>
+          <div className='helper-pie p-6 bg-gray-800 rounded-lg shadow-lg'>
             <PieChat />
           </div>
         </div>

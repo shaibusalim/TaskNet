@@ -8,7 +8,7 @@ import {
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Logo from '../../assets/images/logo3.png';
-import Image from '../../assets/images/img7.jpg'
+import Image from '../../assets/images/img7.jpg';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -16,20 +16,26 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  // Validate email format
   const validateEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
   };
 
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate email
     if (!validateEmail(email)) {
       toast.error('Please enter a valid email address.');
       return;
     }
+
     setLoading(true);
 
     try {
+      // Send login request to the backend
       const response = await fetch('http://localhost:5000/api/auth/login', {
         method: 'POST',
         headers: {
@@ -41,8 +47,21 @@ const Login = () => {
       const data = await response.json();
 
       if (response.ok) {
-        toast.success('Logged in successfully!');
-        navigate('/dashboard'); // Redirect to dashboard
+        toast.success('Logged in successfully, You will be redirected to your Dashboard shortly!');
+
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('userId', data.user.id);
+      
+        // Add a delay of 3 seconds before redirecting
+        setTimeout(() => {
+          if (data.user.role === 'taskPoster') {
+            navigate('/poster'); // Redirect to poster dashboard
+          } else if (data.user.role === 'taskHelper') {
+            navigate('/helper'); // Redirect to helper dashboard
+          } else {
+            navigate('/dashboard'); // Default dashboard
+          }
+        }, 2000); // 3 seconds delay
       } else {
         toast.error(data.message || 'Login failed. Please try again.');
       }

@@ -23,7 +23,7 @@ function PosterLayout({ children }) {
   };
 
   return (
-    <div className="layout-main">
+    <div className="layout-main ">
       <Notifcation openNotification={openNotification} />
       <Message openMessage={openMessage} />
       <div className={`layout-side ${isSidebarOpen ? "open" : ""}`}>

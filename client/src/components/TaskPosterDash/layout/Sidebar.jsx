@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { 
     LayoutDashboard, 
     PlusCircle, 
@@ -16,6 +18,39 @@ import {
   import Logo from "../../../assets/images/logo3.png"
 
 function Sidebar({isSidebarOpen}) {
+
+    const [user, setUser] = useState(null);
+  const userId = localStorage.getItem('userId');
+  const token = localStorage.getItem('token');
+
+  useEffect(() => {
+    const fetchUserDetails = async () => {
+      try {
+        const response = await fetch(`http://localhost:5000/api/users/${userId}`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          setUser(data); // Set user details in state
+        } else {
+          toast.error(data.message || 'Failed to fetch user details.');
+        }
+      } catch (error) {
+        console.error('Error fetching user details:', error);
+        toast.error('An error occurred. Please try again.');
+      }
+    };
+
+    fetchUserDetails();
+  }, [userId, token]);
+
+  if (!user) {
+    return <div>Loading...</div>;
+  }
   return (
     <aside className={`${isSidebarOpen? 'open-sidebar': ''}`}>
         <div className='aside-header'>
@@ -32,19 +67,18 @@ function Sidebar({isSidebarOpen}) {
                 
             </div>
             <div className='aside-user-profile'>
-                <div className='avatar'
-                style={
-                    {
-                        backgroundImage: `url(${Image})`,
-                        backgroundPosition: 'center',
-                        backgroundSize: 'cover'
-                    }
-                }
-                >
+                <div className='avatar'>
+                     <img
+            src={ 'https://via.placeholder.com/150'} // Default profile picture
+            alt="Profile"
+            
+             
+           
+          />
                 </div>
                 <div>
-                <h2>Tony Stark</h2>
-                <label>He is the man</label>
+                <h2>{user.fullName}</h2>
+                <label>{user.bio || 'No bio available.'}</label>
                 </div>
                
             </div>

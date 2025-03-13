@@ -19,7 +19,7 @@ const priorities = [
 const PriorityBar = () => {
   return (
     <Box width="100%" margin="2rem auto">
-      <Accordion defaultExpanded sx={{backgroundColor: "#080815", color:"#fff"}}>
+      <Accordion defaultExpanded sx={{ color:"black"}}>
         {/* Accordion Summary (the clickable header) */}
         <AccordionSummary expandIcon={<ExpandMoreIcon  sx={{color:"#fff"}}/>}>
           <Typography fontWeight="bold">Completed Status</Typography>

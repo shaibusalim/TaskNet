@@ -34,22 +34,22 @@ function Dashboard() {
 
   return (
     <div className='poster-dashboard-main'>
-      <div className='poster-dashboard-header'>
+      <div className='poster-dashboard-header '>
         <h1>DASHBOARD</h1>
         <h2>Welcome to your dashboard</h2>
       </div>
-      <div className='poster-dashboard-content'>
+      <div className='poster-dashboard-content '>
         {/* Cards Section */}
         <div className='poster-dashboard-card'>
           {cardData.map((card, index) => (
             <div
               key={index}
-              className='card p-6 flex flex-col justify-center items-center bg-gray-800 rounded-lg shadow-lg'
+              className='card p-6 flex flex-col justify-center items-center  rounded-lg shadow-[0_4px_14px_0_rgba(128,90,213,2)]'
             >
               {/* Icon Section */}
-              <div className='icon mb-2'>{card.icon}</div>
-              <h3 className='text-lg font-semibold text-gray-300'>{card.title}</h3>
-              <p className='text-2xl font-bold text-white mt-2'>{card.value}</p>
+              <div className='icon mb-2 text-gray-950'>{card.icon}</div>
+              <h3 className='text-lg font-semibold text-gray-800'>{card.title}</h3>
+              <p className='text-2xl font-bold text-gray-800 mt-2'>{card.value}</p>
               <p className='text-sm text-green-400 mt-1'>{card.growth}</p>
             </div>
           ))}

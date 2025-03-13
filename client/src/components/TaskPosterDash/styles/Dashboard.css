@@ -1,10 +1,13 @@
 .poster-dashboard-main{
     padding: 20px;
     color:  white;
-    background-color: #080815;
+    background-color: white;
+    margin-left: 30px;
+   
 }
 .poster-dashboard-main .poster-dashboard-header h1{
     font-size: 2.5rem;
+    color: #4C2C96;
 }
 .poster-dashboard-main .poster-dashboard-header h2{
     color: rgb(9, 210, 9);

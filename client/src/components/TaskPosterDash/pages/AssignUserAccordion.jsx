@@ -42,8 +42,8 @@ const AssignUserAccordion = () => {
       <Accordion
         defaultExpanded
         sx={{
-          backgroundColor: "#080815", // Dark background
-          color: "#fff",           // White text
+          backgroundColor: "white", // Dark background
+          color: "black",           // White text
           borderRadius: 1,
         }}
       >
@@ -51,10 +51,10 @@ const AssignUserAccordion = () => {
           <Typography fontWeight="bold">Assign Users</Typography>
         </AccordionSummary>
 
-        <AccordionDetails sx={{ backgroundColor: "#080815" }}>
+        <AccordionDetails sx={{ backgroundColor: "white" }}>
           <List>
             {users.map((user, index) => (
-              <ListItem key={index} sx={{ color: "#fff" }}>
+              <ListItem key={index} sx={{ color: "black" }}>
                 {/* Avatar (User Image) */}
                 <ListItemAvatar>
                   <Avatar src={user.avatar} alt={user.name} />

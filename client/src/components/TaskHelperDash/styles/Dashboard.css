@@ -1,44 +1,44 @@
-.poster-dashboard-main{
+.helper-dashboard-main{
     padding: 20px;
     color:  white;
     background-color: #080815;
     margin-left: 30px;
 }
-.poster-dashboard-main .poster-dashboard-header h1{
+.helper-dashboard-main .helper-dashboard-header h1{
     font-size: 2.5rem;
 }
-.poster-dashboard-main .poster-dashboard-header h2{
+.helper-dashboard-main .helper-dashboard-header h2{
     color: rgb(9, 210, 9);
     font-size: 1.2rem;
 }
-.poster-dashboard-main .poster-dashboard-content{
+.helper-dashboard-main .helper-dashboard-content{
     margin-top: 30px;
 }
-.poster-dashboard-main .poster-dashboard-card{
+.helper-dashboard-main .helper-dashboard-card{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-.poster-dashboard-main .poster-dashboard-card .card{
+.helper-dashboard-main .helper-dashboard-card .card{
     border: 2px solid white;
     width: 254px;
     height: 150px;
     
 }
-.poster-dashboard-main .poster-dashboard-content .poster-dashboard-piechat{
+.helper-dashboard-main .helper-dashboard-content .helper-dashboard-piechat{
     display: flex;
     gap: 10px;
     margin-top: 50px;
     
 }
-.poster-dashboard-main .poster-dashboard-content .poster-dashboard-piechat .poster-section1{
+.helper-dashboard-main .helper-dashboard-content .helper-dashboard-piechat .helper-section1{
     border: 2px solid white;
     width: 400px;
     height: 300px;
     flex-grow: 1;
 }
-.poster-dashboard-main .poster-dashboard-content .poster-dashboard-piechat .poster-pie{
+.helper-dashboard-main .helper-dashboard-content .helper-dashboard-piechat .helper-pie{
     border: 2px solid white;
     width: 400px;
     height: 300px;
