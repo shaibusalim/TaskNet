@@ -1,9 +1,13 @@
-const { DataTypes, Model } = require("sequelize");
-const sequelize = require("../config/Database");
+// models/User.js
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/Database');
 
-class User extends Model{}
-
-User.init({
+const User = sequelize.define('User', {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
   fullName: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -17,13 +21,9 @@ User.init({
     type: DataTypes.STRING,
     allowNull: false,
   },
-  phoneNumber: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
   location: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   profilePicture: {
     type: DataTypes.STRING,
@@ -32,7 +32,6 @@ User.init({
   role: {
     type: DataTypes.ENUM('taskPoster', 'taskHelper', 'both'),
     allowNull: false,
-    defaultValue: 'taskHelper'
   },
   skills: {
     type: DataTypes.JSON,
@@ -54,14 +53,20 @@ User.init({
     type: DataTypes.JSON,
     allowNull: true,
   },
-  verified: {
+  isVerified: {
     type: DataTypes.BOOLEAN,
     defaultValue: false,
+    allowNull: false,
   },
-},{
-    sequelize,
-    modelName: 'User'
-})
+  otp: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  otpExpiry: {
+    type: DataTypes.DATE,
+    allowNull: true,
+  },
+
+});
 
 module.exports = User;
-
