@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 import '../styles/CreateTask.css';
 
 const CreateTask = () => {
@@ -11,23 +14,54 @@ const CreateTask = () => {
   const [priority, setPriority] = useState('Low');
   const [status, setStatus] = useState('Pending');
   const [attachment, setAttachment] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Construct the task data object
-    const taskData = {
-      title,
-      description,
-      category,
-      deadline,
-      location,
-      payment,
-      priority,
-      status,
-      attachment,
-    };
-    console.log('Task Submitted:', taskData);
-    // Here you would typically send taskData to your backend API
+    setLoading(true);
+
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('description', description);
+    formData.append('category', category);
+    formData.append('deadline', deadline);
+    formData.append('location', location);
+    formData.append('payment', payment);
+    formData.append('priority', priority);
+    formData.append('status', status);
+    if (attachment) {
+      formData.append('attachment', attachment);
+    }
+
+    try {
+      console.log(formData);
+      const token = localStorage.getItem('token');
+      const response = await axios.post('http://localhost:5000/api/tasks', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (response.status === 201) {
+        toast.success('Task created successfully!');
+        // Reset form fields
+        setTitle('');
+        setDescription('');
+        setCategory('');
+        setDeadline('');
+        setLocation('');
+        setPayment('');
+        setPriority('Low');
+        setStatus('Pending');
+        setAttachment(null);
+      }
+    } catch (error) {
+      console.error('Error creating task:', error);
+      toast.error(error.response?.data?.message || 'An error occurred. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
